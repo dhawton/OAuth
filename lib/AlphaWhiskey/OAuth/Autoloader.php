@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of AlphaWhiksey\OAuth
+ * This file is part of dhawton\OAuth
  *
  * Copyright (c) 2014 Daniel A. Hawton
  *
