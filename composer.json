@@ -1,9 +1,9 @@
 {
-    "name": "alphawhiskey/oauth",
+    "name": "dhawton/oauth",
     "type": "library",
     "description": "OAuth namespace compatible with PSR standards",
     "keywords": ["OAuth"],
-    "homepage": "https://github.com/alphawhiskey/oauth",
+    "homepage": "https://github.com/dhawton/oauth",
     "license": "MIT",
     "authors": [
         {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-0": {
-            "AlphaWhiskey\\OAuth" : "lib/"
+            "dhawton\\OAuth" : "lib/"
         }
     }
 }

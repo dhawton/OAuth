@@ -8,7 +8,7 @@
  * For full copyright information, please see the LICENSE file that was distributed with the source
  */
 
-namespace AlphaWhiskey\OAuth;
+namespace dhawton\OAuth;
 
 
 class Request

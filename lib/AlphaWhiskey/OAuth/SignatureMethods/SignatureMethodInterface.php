@@ -8,8 +8,8 @@
  * For full copyright information, please see the LICENSE file that was distributed with the source
  */
 
-namespace AlphaWhiskey\OAuth\SignatureMethods;
-use \AlphaWhiskey\OAuth;
+namespace dhawton\OAuth\SignatureMethods;
+use \dhawton\OAuth;
 
 abstract class SignatureMethodInterface
 {
@@ -19,24 +19,24 @@ abstract class SignatureMethodInterface
     abstract public function getName();
 
     /* Build signature.  Output must not be url encoded as encoding is handled when request is serialized.
-     * @param \AlphaWhiskey\OAuth\Request $request
-     * @param \AlphaWhiskey\OAuth\Consumer $consumer
-     * @param \AlphaWhiskey\OAuth\Token $token
+     * @param \dhawton\OAuth\Request $request
+     * @param \dhawton\OAuth\Consumer $consumer
+     * @param \dhawton\OAuth\Token $token
      * @return string
      */
-    abstract public function buildSignature(\AlphaWhiskey\OAuth\Request $request, \AlphaWhiskey\OAuth\Consumer $consumer, \AlphaWhiskey\OAuth\Token $token);
+    abstract public function buildSignature(\dhawton\OAuth\Request $request, \dhawton\OAuth\Consumer $consumer, \dhawton\OAuth\Token $token);
 
     /**
      * Verifies signature is correct.
      *
-     * @param \AlphaWhiskey\OAuth\Request $request
-     * @param \AlphaWhiskey\OAuth\Consumer $consumer
-     * @param \AlphaWhiskey\OAuth\Token $token
+     * @param \dhawton\OAuth\Request $request
+     * @param \dhawton\OAuth\Consumer $consumer
+     * @param \dhawton\OAuth\Token $token
      * @param $signature
      *
      * @return bool
      */
-    public function checkSignature(\AlphaWhiskey\OAuth\Request $request, \AlphaWhiskey\OAuth\Consumer $consumer, \AlphaWhiskey\OAuth\Token $token, $signature)
+    public function checkSignature(\dhawton\OAuth\Request $request, \dhawton\OAuth\Consumer $consumer, \dhawton\OAuth\Token $token, $signature)
     {
         $built = $this->buildSignature($request, $consumer, $token);
 

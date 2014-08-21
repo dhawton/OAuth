@@ -1,21 +1,21 @@
-AlphaWhiskey\\OAuth
+dhawton\\OAuth
 =====================
-[![License](http://www.alphawhiskey.org/projects/icons/mit.svg)](http://www.github.com/alphawhiskey/OAuth)
+[![License](http://www.dhawton.org/projects/icons/mit.svg)](http://www.github.com/dhawton/OAuth)
 
-[AlphaWhiskey\\OAuth](http://github.com/alphawhiskey/oauth) is a plugin system based on code originally written by
+[dhawton\\OAuth](http://github.com/dhawton/oauth) is a plugin system based on code originally written by
 Andy Smith to create a standard library for the OAuth 1.0 standards that follows the PSR standards of coding.
 
 Installation
 ------------
 
-For composer users, install AlphaWhiskey\OAuth by inserting the following into `composer.json`:
+For composer users, install dhawton\OAuth by inserting the following into `composer.json`:
 
     {
         "require": {
-            "AlphaWhiskey/OAuth": "dev-master"
+            "dhawton/OAuth": "dev-master"
         }
     }
 
-For users not using composer, require "lib/AlphaWhiskey/OAuth/Autoloader.php" and execute:
+For users not using composer, require "lib/dhawton/OAuth/Autoloader.php" and execute:
 
-AlphaWhiskey\OAuth\Autoloader::register();
+dhawton\OAuth\Autoloader::register();

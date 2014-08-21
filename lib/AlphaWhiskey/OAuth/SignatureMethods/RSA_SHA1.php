@@ -8,7 +8,7 @@
  * For full copyright information, please see the LICENSE file that was distributed with the source
  */
 
-namespace AlphaWhiskey\OAuth\SignatureMethods;
+namespace dhawton\OAuth\SignatureMethods;
 
 
 class RSA_SHA1 extends SignatureMethodInterface
@@ -26,16 +26,16 @@ class RSA_SHA1 extends SignatureMethodInterface
     }
 
     /**
-     * @param \AlphaWhiskey\OAuth\Request $request
+     * @param \dhawton\OAuth\Request $request
      *
      * @return string   Return string representation of cert
      */
-    private function fetchPrivateCert(\AlphaWhiskey\OAuth\Request &$request)
+    private function fetchPrivateCert(\dhawton\OAuth\Request &$request)
     {
         return $this->cert;
     }
 
-    public function buildSignature(\AlphaWhiskey\OAuth\Request $request, \AlphaWhiskey\OAuth\Consumer $consumer, \AlphaWhiskey\OAuth\Token $token)
+    public function buildSignature(\dhawton\OAuth\Request $request, \dhawton\OAuth\Consumer $consumer, \dhawton\OAuth\Token $token)
     {
         $baseString = $request->getSignatureBaseString();
         $request->baseString = $baseString;

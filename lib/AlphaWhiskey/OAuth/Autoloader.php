@@ -7,17 +7,17 @@
  * For full copyright information, please see the LICENSE file that was distributed with the source
  */
 
-namespace AlphaWhiskey\OAuth;
+namespace dhawton\OAuth;
 
 /**
  * Class Autoloader
- * @package AlphaWhiskey\OAuth
+ * @package dhawton\OAuth
  * @author Daniel A. Hawton <daniel@hawton.com>
  */
 class Autoloader
 {
     /**
-     * Registers AlphaWhiskey\OAuth\Autoloader as an SPL autoloader.
+     * Registers dhawton\OAuth\Autoloader as an SPL autoloader.
      */
     public static function register($prepend = false)
     {
@@ -37,17 +37,17 @@ class Autoloader
     {
         $class = ltrim($class, '\\');
         $fileName = $namespace = '';
-        if (0 !== strpos($class, 'AlphaWhiskey\OAuth'))
+        if (0 !== strpos($class, 'dhawton\OAuth'))
         {
             return;
         }
 
         if ($lastNsPos = strrpos($class, '\\')) {
             $namespace = substr($class, 0, $lastNsPos);
-            $className = substr($class, $lastNsPos + 1);
+            $class = substr($class, $lastNsPos + 1);
             $fileName = str_replace('\\', DIRECTORY_SEPARATOR, $namespace) . DIRECTORY_SEPARATOR;
         }
-        $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $className) . '.php';
+        $fileName .= str_replace('_', DIRECTORY_SEPARATOR, $class) . '.php';
 
         if (file_exists($fileName))
             require $fileName;
